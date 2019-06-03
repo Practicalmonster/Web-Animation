@@ -1,0 +1,99 @@
+*{
+    margin:0;
+    padding:0;
+}
+
+.layout{
+    position:relative;
+    width:100vw;
+    height:100vh;
+    transform-style: preserve-3d;
+    perspective: initial;
+    transition:all 1s;
+    transform-origin: 50vh 50vh -50vh;
+}
+
+.layout.ToBack{
+    transform:rotateY(180deg);
+}
+.layout.ToFront{
+    transform:rotate(0deg);
+}
+.layout.ToBottom{
+    transform:rotateX(90deg);
+}
+.layout.ToTop{
+    transform:rotateX(-90deg);
+}
+.layout.ToRight{
+    transform:rotateY(-90deg);
+}
+.layout.ToLeft{
+    transform:rotateY(90deg);
+}
+
+.face{
+    flex-direction: column;
+    width:100vw;
+    height: 100vh;
+    position:absolute;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color:white;
+    background-color: white;
+    transition:all 0.5s;
+    border:solid red;
+
+}
+.front{
+}
+.back{
+    transform-origin:50vh 50vh -50vh; 
+    transform: rotateY(180deg);
+}
+.bottom{
+    transform: translateZ(-100vh) rotateX(-90deg);
+    transform-origin: bottom;
+}
+.right{
+    transform-origin: right;
+    transform: rotateY(90deg) translateX(100vw);
+}
+.left{
+    transform-origin: left;
+    transform:rotateY(-90deg) translateX(-100vh);
+}
+.top{
+    transform-origin: top;
+    transform: translateZ(-100vh) rotateX(90deg)
+} 
+
+
+.image{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    background-color: aqua;
+    height:40vh;
+    width:60vw;
+    text-align: center;
+    color:black;
+}
+ul{
+    list-style: none;
+    display:flex;
+    justify-content: space-around;
+}
+li{
+    margin-top: 20px;
+    text-indent:10px;
+}
+
+li:hover{
+    color:red;
+    cursor: pointer;
+}

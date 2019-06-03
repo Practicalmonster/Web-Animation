@@ -1,0 +1,12 @@
+svg {
+    width: 240px;
+    height: 240px;
+  }
+
+
+svg #shape {
+    fill: none;
+    stroke: red;
+    stroke-width: 4;
+    transition: all 4s ease-in-out;
+}
